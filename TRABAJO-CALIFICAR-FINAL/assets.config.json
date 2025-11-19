@@ -1,0 +1,9 @@
+{
+  "platforms": {
+    "android": {
+      "icon": {
+        "source": "./assets/icon.png"
+      }
+    }
+  }
+}

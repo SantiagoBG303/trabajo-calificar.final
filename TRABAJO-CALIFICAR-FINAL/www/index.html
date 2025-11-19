@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style.css">
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ChimbaFitness — Entrenador</title>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo-sq">CF</div>
+      <div>
+        <h1 class="app-title">ChimbaFitness</h1>
+        <p class="tag">Rutinas rápidas — Sin equipo</p>
+      </div>
+    </div>
+    <button id="btn-settings" class="icon-btn" title="Ajustes">⚙️</button>
+  </header>
+
+  <main class="wrap">
+    <aside class="side">
+      <h2>Entrenamientos</h2>
+      <nav id="lista-rutinas" class="rutina-list">
+        <!-- JS genera botones -->
+      </nav>
+
+      <div class="small-card">
+        <h3>Tu progreso</h3>
+        <p id="last-session">Sin sesión reciente</p>
+      </div>
+
+      <div class="small-card">
+        <h3>Notas</h3>
+        <p class="muted">APP PARA TONIFICAR Y ALCANZAR TUS METAS FITNESS</p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div id="intro" class="card intro">
+        <h2 id="bienvenida">Selecciona una rutina</h2>
+        <p id="intro-text">Elige una rutina a la izquierda para ver ejercicios y comenzar.</p>
+      </div>
+
+      <div id="panel-rutina" class="card rutina-panel hidden">
+        <div class="rutina-header">
+          <h2 id="rutina-title"></h2>
+          <div class="rutina-meta">
+            <span id="rutina-time">—</span>
+            <span id="rutina-count">— ejercicios</span>
+          </div>
+        </div>
+
+        <ol id="ejercicios-list" class="ejercicios-list"></ol>
+
+        <div class="player">
+          <div class="timer-area">
+            <div id="ej-titulo" class="ej-titulo">—</div>
+            <div id="timer" class="timer">00:00</div>
+            <progress id="progress" value="0" max="100"></progress>
+          </div>
+
+          <div class="controls">
+            <button id="btn-prev" class="control">⏮️</button>
+            <button id="btn-start" class="control primary">▶️ Start</button>
+            <button id="btn-pause" class="control">⏸️</button>
+            <button id="btn-next" class="control">⏭️</button>
+          </div>
+
+          <div class="reps-row">
+            <button id="btn-decrease" class="rep-btn">−</button>
+            <div class="rep-count">
+              <div>Reps</div>
+              <div id="rep-number">0</div>
+            </div>
+            <button id="btn-increase" class="rep-btn">+</button>
+          </div>
+        </div>
+
+        <div class="rutina-footer">
+          <button id="btn-finish" class="btn-ghost">Finalizar rutina</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Hecho por Santiago & Angie Neiza • ChimbaFitness</p>
+  </footer>
+
+  <!-- Import Vite module -->
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
